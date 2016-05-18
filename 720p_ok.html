@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Video Codec Test Results</title>
+<style type="text/css">
+<!-- Begin 960 reset -->
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,c
+ode,dd,del,details,dfn,dialog,div,dl,dt,em,embed,fieldset,figcaption,figure,font,footer,form,h1,h2,h
+3,h4,h5,h6,header,hgroup,hr,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,meter,nav,object,ol,
+output,p,pre,progress,q,rp,rt,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbo
+dy,td,tfoot,th,thead,time,tr,tt,u,ul,var,video,xmp{border:0;margin:0;padding:0;font-size:100%}html,b
+ody{height:100%}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{displa
+y:block}b,strong{font-weight:bold}img{color:transparent;font-size:0;vertical-align:middle;-ms-interp
+olation-mode:bicubic}ol,ul{list-style:none}li{display:list-item}table{border-collapse:collapse;borde
+r-spacing:0}th,td,caption{font-weight:normal;vertical-align:top;text-align:left}q{quotes:none}q:befo
+re,q:after{content:'';content:none}sub,sup,small{font-size:75%}sub,sup{line-height:0;position:relati
+ve;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}svg{overflow:hidden}
+<!-- End 960 reset -->
+<!-- Begin 960 text -->
+body{font:13px/1.5 'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif}pre,code{font-family
+:'DejaVu Sans Mono',Menlo,Consolas,monospace}hr{border:0 #ccc solid;border-top-width:1px;clear:both;
+height:0}h1{font-size:25px}h2{font-size:23px}h3{font-size:21px}h4{font-size:19px}h5{font-size:17px}h
+6{font-size:15px}ol{list-style:decimal}ul{list-style:disc}li{margin-left:30px}p,dl,hr,h1,h2,h3,h4,h5
+,h6,ol,ul,pre,table,address,fieldset,figure{margin-bottom:20px}
+<!-- End 960 text -->
+<!-- Begin 960 grid (fluid variant)
+     12 columns, 1152px total width
+     http://960.gs/ | http://grids.heroku.com/ -->
+.container_12{width:92%;margin-left:4%;margin-right:4%}.grid_1,.grid_2,.grid_3,.grid_4,.grid_5,.grid
+_6,.grid_7,.grid_8,.grid_9,.grid_10,.grid_11,.grid_12{display:inline;float:left;position:relative;ma
+rgin-left:1%;margin-right:1%}.alpha{margin-left:0}.omega{margin-right:0}.container_12 .grid_1{width:
+6.333%}.container_12 .grid_2{width:14.667%}.container_12 .grid_3{width:23.0%}.container_12 .grid_4{w
+idth:31.333%}.container_12 .grid_5{width:39.667%}.container_12 .grid_6{width:48.0%}.container_12 .gr
+id_7{width:56.333%}.container_12 .grid_8{width:64.667%}.container_12 .grid_9{width:73.0%}.container_
+12 .grid_10{width:81.333%}.container_12 .grid_11{width:89.667%}.container_12 .grid_12{width:98.0%}.c
+ontainer_12 .prefix_1{padding-left:8.333%}.container_12 .prefix_2{padding-left:16.667%}.container_12
+ .prefix_3{padding-left:25.0%}.container_12 .prefix_4{padding-left:33.333%}.container_12 .prefix_5{p
+adding-left:41.667%}.container_12 .prefix_6{padding-left:50.0%}.container_12 .prefix_7{padding-left:
+58.333%}.container_12 .prefix_8{padding-left:66.667%}.container_12 .prefix_9{padding-left:75.0%}.con
+tainer_12 .prefix_10{padding-left:83.333%}.container_12 .prefix_11{padding-left:91.667%}.container_1
+2 .suffix_1{padding-right:8.333%}.container_12 .suffix_2{padding-right:16.667%}.container_12 .suffix
+_3{padding-right:25.0%}.container_12 .suffix_4{padding-right:33.333%}.container_12 .suffix_5{padding
+-right:41.667%}.container_12 .suffix_6{padding-right:50.0%}.container_12 .suffix_7{padding-right:58.
+333%}.container_12 .suffix_8{padding-right:66.667%}.container_12 .suffix_9{padding-right:75.0%}.cont
+ainer_12 .suffix_10{padding-right:83.333%}.container_12 .suffix_11{padding-right:91.667%}.container_
+12 .push_1{left:8.333%}.container_12 .push_2{left:16.667%}.container_12 .push_3{left:25.0%}.containe
+r_12 .push_4{left:33.333%}.container_12 .push_5{left:41.667%}.container_12 .push_6{left:50.0%}.conta
+iner_12 .push_7{left:58.333%}.container_12 .push_8{left:66.667%}.container_12 .push_9{left:75.0%}.co
+ntainer_12 .push_10{left:83.333%}.container_12 .push_11{left:91.667%}.container_12 .pull_1{left:-8.3
+33%}.container_12 .pull_2{left:-16.667%}.container_12 .pull_3{left:-25.0%}.container_12 .pull_4{left
+:-33.333%}.container_12 .pull_5{left:-41.667%}.container_12 .pull_6{left:-50.0%}.container_12 .pull_
+7{left:-58.333%}.container_12 .pull_8{left:-66.667%}.container_12 .pull_9{left:-75.0%}.container_12
+.pull_10{left:-83.333%}.container_12 .pull_11{left:-91.667%}.clear{clear:both;display:block;overflow
+:hidden;visibility:hidden;width:0;height:0}.clearfix:after{clear:both;content:' ';display:block;font
+-size:0;line-height:0;visibility:hidden;width:0;height:0}.clearfix{display:inline-block}* html .clea
+rfix{height:1%}.clearfix{display:block}
+<!-- End 960 grid -->
+
+div.metricgraph {
+
+}
+
+body {
+
+}
+
+div.header {
+  font-family: Arial, sans-serif;
+}
+
+div.header h2 {
+  margin: .5em auto;
+}
+
+div.radio {
+  font-family: Arial, sans-serif;
+  margin-bottom: 1em;
+}
+
+div.main {
+
+}
+
+div.cliplist {
+  font-family: Arial, sans-serif;
+  margin-top: 6px;
+}
+
+div.chartarea {
+  font-family: Arial, sans-serif;
+}
+
+div.indicators {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  margin-top: 6px;
+  min-height: 600px;
+  background-color: #f7f7f7;
+}
+
+div.indicators div.content {
+  margin: 1em;
+}
+
+div.indicators div.content h5 {
+  font-size: 13px;
+  text-align: center;
+  margin: 0;
+}
+
+div.indicators div.content ul {
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+div.indicators div.content ul li {
+  margin-left: 1.5em;
+}
+
+div.indicators div.content p:first-child {
+  margin-bottom: .5em;
+}
+
+span.google-visualization-table-sortind {
+  color: #000;
+}
+.header-style {
+  font-weight: bold;
+  border: 1px solid #fff;
+  background-color: #ccc;
+}
+
+td.header-style+td {
+
+}
+
+.orange-background {
+  background-color: orange;
+}
+
+.light-gray-background {
+  background-color: #f0f0f0;
+}
+</style>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+var chart_left   = 40;
+var chart_top    = 6;
+var chart_height = document.documentElement.clientHeight-100;
+var chart_width  = "100%";
+ftable='filestable_avg'
+var snrs = [];
+var filestable_dsnr = [];
+var filestable_drate = [];
+var filestable_avg = [];
+
+// Python template code replaces the following 2 lines.
+metrics = ["Bitrate", "AVGPsnr", "GLBPsnr", "AVPsnrP", "GLPsnrP", "VPXSSIM", "Time(us)", "Rc-Err", "Abs", "Err"];
+filestable_dsnr[1]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-2.2764643665542015},{"v":-1.4588670920708084},{"v":-0.49295744017705362}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-0.68902483988474383},{"v":-0.37077989797232319},{"v":-0.25667706792098083}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-4.4388494501297515},{"v":-4.0371202767830487},{"v":-0.55053400921847295}]},{"c":[{"v":"OVERALL"},{"v":-2.4681128855228991},{"v":-1.95558908894206},{"v":-0.43338950577216911}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_dsnr[2]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-2.6025534365919683},{"v":-1.4998630913621036},{"v":-0.51433259383571517}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-0.69079956111895668},{"v":-0.37752017675311927},{"v":-0.27007711582332444}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-4.512659807545127},{"v":-4.1048951153589739},{"v":-0.60967769523623327}]},{"c":[{"v":"OVERALL"},{"v":-2.6020042684186842},{"v":-1.9940927944913991},{"v":-0.46469580163175767}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_dsnr[3]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-2.3624249933975356},{"v":-1.536042613033584},{"v":-0.53399579489624671}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-0.72398947688579318},{"v":-0.40341343702508292},{"v":-0.26562865322145091}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-4.4802835723923016},{"v":-4.073503197338562},{"v":-0.5496889341821829}]},{"c":[{"v":"OVERALL"},{"v":-2.5222326808918769},{"v":-2.0043197491324096},{"v":-0.44977112743329356}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_dsnr[4]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-2.633731998348336},{"v":-1.55268651829727},{"v":-0.54290775312547079}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-0.72305430614180477},{"v":-0.40776923968037793},{"v":-0.27930985573751566}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-4.5552961635066369},{"v":-4.141900734627507},{"v":-0.60906602642477237}]},{"c":[{"v":"OVERALL"},{"v":-2.6373608226655922},{"v":-2.0341188308683851},{"v":-0.47709454509591964}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_dsnr[5]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-5.5835371981702888},{"v":-2.2407623753089161},{"v":-0.88801181387915895}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-3.2736985531301532},{"v":-1.544630745226798},{"v":-1.3426430157315832}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-23.212962123412169},{"v":-19.549354724666074},{"v":-2.5471538566298952}]},{"c":[{"v":"OVERALL"},{"v":-10.690065958237538},{"v":-7.7782492817339302},{"v":-1.592602895413546}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_dsnr[6]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-21768.425077532207},{"v":-14183.993939289445},{"v":-11512.794784627964}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-31686.657523546768},{"v":-21405.730007916671},{"v":-20955.22424488471}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-57304.157206366872},{"v":-42929.448813261792},{"v":-34840.877429269691}]},{"c":[{"v":"OVERALL"},{"v":-36919.746602481951},{"v":-26173.057586822641},{"v":-22436.298819594125}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_dsnr[7]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-0.48998227648442533},{"v":-0.48915280229154029},{"v":0.38380129820924969}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-2.341407505608367},{"v":-2.3409658544126941},{"v":-0.040920531245831282}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-0.11762496809998323},{"v":-0.10866716731317372},{"v":0.22456277703416114}]},{"c":[{"v":"OVERALL"},{"v":-0.98300491673092516},{"v":-0.97959527467246932},{"v":0.18914784799919318}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_dsnr[8]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-0.48998227648442533},{"v":-0.48915280229154029},{"v":0.38380129820924969}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-2.341407505608367},{"v":-2.3409658544126941},{"v":-0.040920531245831282}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-0.36521352897472908},{"v":-0.35777922513268623},{"v":0.46452215447574052}]},{"c":[{"v":"OVERALL"},{"v":-1.0655344370225073},{"v":-1.0626326272789735},{"v":0.26913430714638631}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_dsnr[9]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":0.0}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":0.0}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":0.0},{"v":0.0},{"v":0.0}]},{"c":[{"v":"OVERALL"},{"v":0.0},{"v":0.0},{"v":0.0}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+
+filestable_avg[1]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-35.60970877849672},{"v":-25.49204434782355},{"v":-9.477801688433736}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-13.591285295238226},{"v":-8.223442887861784},{"v":-5.075760215422891}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-71.88211154407644},{"v":-65.80837473492},{"v":-24.05592941915946}]},{"c":[{"v":"OVERALL"},{"v":-40.36103520593713},{"v":-33.17462065686845},{"v":-12.869830441005362}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_avg[2]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-38.033529665116816},{"v":-24.942978640279335},{"v":-9.244426655625148}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-13.556341708355252},{"v":-8.23694255454176},{"v":-5.241832861158385}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-71.85757345720889},{"v":-65.4346777890255},{"v":-25.302559178496907}]},{"c":[{"v":"OVERALL"},{"v":-41.14914827689365},{"v":-32.87153299461553},{"v":-13.26293956509348}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_avg[3]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-38.09975245115459},{"v":-27.723516850936488},{"v":-10.942293344324607}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-14.573478782395943},{"v":-9.08935952709263},{"v":-5.339409414172895}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-72.24502742915077},{"v":-66.2427777108714},{"v":-24.05244248519669}]},{"c":[{"v":"OVERALL"},{"v":-41.63941955423377},{"v":-34.35188469630017},{"v":-13.444715081231399}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_avg[4]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-39.972202884318456},{"v":-26.928655203872086},{"v":-10.492437030310422}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-14.48906145486889},{"v":-9.058940401126842},{"v":-5.509712894882032}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-72.22384040034788},{"v":-65.9324117709918},{"v":-25.29562049193229}]},{"c":[{"v":"OVERALL"},{"v":-42.22836824651174},{"v":-33.97333579199691},{"v":-13.765923472374915}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_avg[5]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-36.973515273316366},{"v":-21.0215787254202},{"v":-9.236799097213988}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-12.669690296825104},{"v":-6.889851161761645},{"v":-5.054917382783941}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-56.34707150316015},{"v":-48.85718410080928},{"v":-27.647895688640737}]},{"c":[{"v":"OVERALL"},{"v":-35.33009235776721},{"v":-25.589537995997038},{"v":-13.979870722879555}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_avg[6]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":0.0},{"v":-76.86729650755943},{"v":-66.29614965829724}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":0.0}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":0.0},{"v":-73.83738311964456},{"v":-64.04893197571207}]},{"c":[{"v":"OVERALL"},{"v":0.0},{"v":-50.23489320906799},{"v":-43.448360544669775}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_avg[7]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":-14.965246423075051}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":11.436123559641828}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":0.0},{"v":0.0},{"v":20.443533719883025}]},{"c":[{"v":"OVERALL"},{"v":0.0},{"v":0.0},{"v":5.638136952149934}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_avg[8]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":-14.965246423075051}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":11.436123559641828}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":0.0},{"v":0.0},{"v":-13.489972336545309}]},{"c":[{"v":"OVERALL"},{"v":0.0},{"v":0.0},{"v":-5.673031733326177}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_avg[9]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":0.0}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":0.0}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":0.0},{"v":0.0},{"v":0.0}]},{"c":[{"v":"OVERALL"},{"v":0.0},{"v":0.0},{"v":0.0}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+
+filestable_drate[1]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-36.28891850986006},{"v":-25.153394837262542},{"v":-9.132920526520172}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-14.25576722553915},{"v":-8.045190631981026},{"v":-5.438356329771765}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-75.31381279388245},{"v":-71.92388757468842},{"v":-17.43293379368508}]},{"c":[{"v":"OVERALL"},{"v":-41.95283284309389},{"v":-35.04082434797733},{"v":-10.668070216659006}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_drate[2]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-38.716815576229855},{"v":-24.29821198366241},{"v":-8.828933519248483}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-13.96852409369227},{"v":-8.014186558434256},{"v":-5.620727777737811}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-75.29151715812854},{"v":-71.95718728875129},{"v":-18.414435350702483}]},{"c":[{"v":"OVERALL"},{"v":-42.65895227601689},{"v":-34.75652861028265},{"v":-10.954698882562925}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_drate[3]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-38.65143440191131},{"v":-27.126234497528458},{"v":-10.11452640547893}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-15.239675864233337},{"v":-8.922564944058243},{"v":-5.736435801099871}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-75.56907293596483},{"v":-72.18946503993125},{"v":-17.402096672323488}]},{"c":[{"v":"OVERALL"},{"v":-43.15339440070316},{"v":-36.07942149383931},{"v":-11.084352959634096}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_drate[4]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-40.439991647984385},{"v":-25.957629081841905},{"v":-9.612337892339063}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-14.88092916317868},{"v":-8.822496136094449},{"v":-5.9238696865838385}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-75.55306914044061},{"v":-72.2421091786544},{"v":-18.392172239567806}]},{"c":[{"v":"OVERALL"},{"v":-43.624663317201225},{"v":-35.67407813219692},{"v":-11.309459939496904}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_drate[5]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":-36.672921822218065},{"v":-17.78391568064963},{"v":-7.4730281633828}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":-13.329751836421156},{"v":-6.647880290664887},{"v":-5.588629840496473}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":-68.35205847450399},{"v":-59.967416455653165},{"v":-15.136756828829078}]},{"c":[{"v":"OVERALL"},{"v":-39.45157737771441},{"v":-28.133070808989228},{"v":-9.399471610902784}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_drate[6]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":0.0},{"v":-78.09389963467171},{"v":-67.60093683594694}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":0.0}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":0.0},{"v":-76.46319714817874},{"v":-65.60673393755512}]},{"c":[{"v":"OVERALL"},{"v":0.0},{"v":-51.519032260950155},{"v":-44.402556924500686}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_drate[7]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":-31.42007687265812}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":-1.0549391456453505}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":0.0},{"v":0.0},{"v":-48.16175697601831}]},{"c":[{"v":"OVERALL"},{"v":0.0},{"v":0.0},{"v":-26.87892433144059}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_drate[8]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":-31.42007687265812}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":-1.0549391456453505}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":0.0},{"v":0.0},{"v":24.237425676037727}]},{"c":[{"v":"OVERALL"},{"v":0.0},{"v":0.0},{"v":-2.7458634474219146}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+filestable_drate[9]={"rows":[{"c":[{"v":"battledrift_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":0.0}]},{"c":[{"v":"kylie_1280x720.y4m"},{"v":0.0},{"v":0.0},{"v":0.0}]},{"c":[{"v":"mobcal_1280x720p.y4m"},{"v":0.0},{"v":0.0},{"v":0.0}]},{"c":[{"v":"OVERALL"},{"v":0.0},{"v":0.0},{"v":0.0}]}],"cols":[{"type":"string","id":"file","label":"File"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}
+
+snrs[1] = ['{"rows":[{"c":[{"v":1000.295},null,{"v":38.19},null,null]},{"c":[{"v":2026.918},null,{"v":42.031},null,null]},{"c":[{"v":3044.092},null,{"v":44.126},null,null]},{"c":[{"v":4040.78},null,{"v":45.62},null,null]},{"c":[{"v":5066.685},null,{"v":46.823},null,null]},{"c":[{"v":6046.157},null,{"v":47.696},null,null]},{"c":[{"v":1012.805},null,null,{"v":39.092},null]},{"c":[{"v":2009.085},null,null,{"v":42.897},null]},{"c":[{"v":3039.447},null,null,{"v":44.929},null]},{"c":[{"v":4029.663},null,null,{"v":46.339},null]},{"c":[{"v":5049.642},null,null,{"v":47.472},null]},{"c":[{"v":6065.847},null,null,{"v":48.351},null]},{"c":[{"v":1013.382},null,null,null,{"v":39.902}]},{"c":[{"v":2020.602},null,null,null,{"v":43.909}]},{"c":[{"v":3029.122},null,null,null,{"v":45.96}]},{"c":[{"v":4011.015},null,null,null,{"v":47.363}]},{"c":[{"v":5020.662},null,null,null,{"v":48.433}]},{"c":[{"v":6027.633},null,null,null,{"v":49.229}]},{"c":[{"v":1009.752},{"v":40.294},null,null,null]},{"c":[{"v":2004.795},{"v":44.39},null,null,null]},{"c":[{"v":3018.59},{"v":46.501},null,null,null]},{"c":[{"v":4003.247},{"v":47.831},null,null,null]},{"c":[{"v":5033.577},{"v":48.899},null,null,null]},{"c":[{"v":6023.93},{"v":49.686},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1085.014},null,{"v":31.619},null,null]},{"c":[{"v":2018.61},null,{"v":34.125},null,null]},{"c":[{"v":3024.714},null,{"v":36.382},null,null]},{"c":[{"v":4028.454},null,{"v":37.748},null,null]},{"c":[{"v":5053.778},null,{"v":38.766},null,null]},{"c":[{"v":6046.827},null,{"v":39.566},null,null]},{"c":[{"v":1070.864},null,null,{"v":32.01},null]},{"c":[{"v":2011.309},null,null,{"v":34.479},null]},{"c":[{"v":3030.466},null,null,{"v":36.686},null]},{"c":[{"v":4029.843},null,null,{"v":37.991},null]},{"c":[{"v":5040.13},null,null,{"v":38.957},null]},{"c":[{"v":6050.021},null,null,{"v":39.733},null]},{"c":[{"v":1085.821},null,null,null,{"v":32.005}]},{"c":[{"v":2025.413},null,null,null,{"v":34.575}]},{"c":[{"v":3020.923},null,null,null,{"v":36.858}]},{"c":[{"v":4033.966},null,null,null,{"v":38.218}]},{"c":[{"v":5042.509},null,null,null,{"v":39.162}]},{"c":[{"v":6036.622},null,null,null,{"v":39.926}]},{"c":[{"v":1092.909},{"v":32.384},null,null,null]},{"c":[{"v":2018.438},{"v":34.846},null,null,null]},{"c":[{"v":3021.581},{"v":37.098},null,null,null]},{"c":[{"v":4033.731},{"v":38.415},null,null,null]},{"c":[{"v":5039.71},{"v":39.325},null,null,null]},{"c":[{"v":6049.85},{"v":40.085},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1143.621},null,{"v":29.012},null,null]},{"c":[{"v":2001.264},null,{"v":30.118},null,null]},{"c":[{"v":3007.213},null,{"v":30.722},null,null]},{"c":[{"v":4015.376},null,{"v":31.399},null,null]},{"c":[{"v":5010.517},null,{"v":32.096},null,null]},{"c":[{"v":6050.053},null,{"v":32.628},null,null]},{"c":[{"v":1157.4},null,null,{"v":29.287},null]},{"c":[{"v":1992.832},null,null,{"v":30.528},null]},{"c":[{"v":2998.157},null,null,{"v":31.168},null]},{"c":[{"v":4032.717},null,null,{"v":31.883},null]},{"c":[{"v":5039.379},null,null,{"v":32.59},null]},{"c":[{"v":5992.848},null,null,{"v":33.083},null]},{"c":[{"v":1032.885},null,null,null,{"v":31.426}]},{"c":[{"v":1987.043},null,null,null,{"v":34.034}]},{"c":[{"v":2995.272},null,null,null,{"v":34.811}]},{"c":[{"v":4009.312},null,null,null,{"v":35.556}]},{"c":[{"v":5005.691},null,null,null,{"v":36.138}]},{"c":[{"v":5990.219},null,null,null,{"v":36.518}]},{"c":[{"v":1015.088},{"v":30.951},null,null,null]},{"c":[{"v":2002.261},{"v":34.898},null,null,null]},{"c":[{"v":2994.869},{"v":35.656},null,null,null]},{"c":[{"v":3989.763},{"v":36.256},null,null,null]},{"c":[{"v":4986.867},{"v":36.711},null,null,null]},{"c":[{"v":5979.608},{"v":37.009},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}',]
+snrs[2] = ['{"rows":[{"c":[{"v":1000.295},null,{"v":37.209},null,null]},{"c":[{"v":2026.918},null,{"v":41.181},null,null]},{"c":[{"v":3044.092},null,{"v":43.383},null,null]},{"c":[{"v":4040.78},null,{"v":44.919},null,null]},{"c":[{"v":5066.685},null,{"v":46.198},null,null]},{"c":[{"v":6046.157},null,{"v":47.06},null,null]},{"c":[{"v":1012.805},null,null,{"v":38.206},null]},{"c":[{"v":2009.085},null,null,{"v":42.372},null]},{"c":[{"v":3039.447},null,null,{"v":44.512},null]},{"c":[{"v":4029.663},null,null,{"v":45.997},null]},{"c":[{"v":5049.642},null,null,{"v":47.152},null]},{"c":[{"v":6065.847},null,null,{"v":48.063},null]},{"c":[{"v":1013.382},null,null,null,{"v":38.965}]},{"c":[{"v":2020.602},null,null,null,{"v":43.41}]},{"c":[{"v":3029.122},null,null,null,{"v":45.565}]},{"c":[{"v":4011.015},null,null,null,{"v":47.067}]},{"c":[{"v":5020.662},null,null,null,{"v":48.197}]},{"c":[{"v":6027.633},null,null,null,{"v":48.972}]},{"c":[{"v":1009.752},{"v":39.482},null,null,null]},{"c":[{"v":2004.795},{"v":43.877},null,null,null]},{"c":[{"v":3018.59},{"v":46.12},null,null,null]},{"c":[{"v":4003.247},{"v":47.513},null,null,null]},{"c":[{"v":5033.577},{"v":48.653},null,null,null]},{"c":[{"v":6023.93},{"v":49.473},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1085.014},null,{"v":31.362},null,null]},{"c":[{"v":2018.61},null,{"v":33.598},null,null]},{"c":[{"v":3024.714},null,{"v":36.126},null,null]},{"c":[{"v":4028.454},null,{"v":37.583},null,null]},{"c":[{"v":5053.778},null,{"v":38.618},null,null]},{"c":[{"v":6046.827},null,{"v":39.439},null,null]},{"c":[{"v":1070.864},null,null,{"v":31.735},null]},{"c":[{"v":2011.309},null,null,{"v":33.946},null]},{"c":[{"v":3030.466},null,null,{"v":36.429},null]},{"c":[{"v":4029.843},null,null,{"v":37.828},null]},{"c":[{"v":5040.13},null,null,{"v":38.819},null]},{"c":[{"v":6050.021},null,null,{"v":39.608},null]},{"c":[{"v":1085.821},null,null,null,{"v":31.729}]},{"c":[{"v":2025.413},null,null,null,{"v":33.996}]},{"c":[{"v":3020.923},null,null,null,{"v":36.618}]},{"c":[{"v":4033.966},null,null,null,{"v":38.062}]},{"c":[{"v":5042.509},null,null,null,{"v":39.033}]},{"c":[{"v":6036.622},null,null,null,{"v":39.812}]},{"c":[{"v":1092.909},{"v":32.107},null,null,null]},{"c":[{"v":2018.438},{"v":34.303},null,null,null]},{"c":[{"v":3021.581},{"v":36.866},null,null,null]},{"c":[{"v":4033.731},{"v":38.262},null,null,null]},{"c":[{"v":5039.71},{"v":39.197},null,null,null]},{"c":[{"v":6049.85},{"v":39.968},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1143.621},null,{"v":28.851},null,null]},{"c":[{"v":2001.264},null,{"v":29.924},null,null]},{"c":[{"v":3007.213},null,{"v":30.469},null,null]},{"c":[{"v":4015.376},null,{"v":31.163},null,null]},{"c":[{"v":5010.517},null,{"v":31.888},null,null]},{"c":[{"v":6050.053},null,{"v":32.422},null,null]},{"c":[{"v":1157.4},null,null,{"v":29.137},null]},{"c":[{"v":1992.832},null,null,{"v":30.344},null]},{"c":[{"v":2998.157},null,null,{"v":30.93},null]},{"c":[{"v":4032.717},null,null,{"v":31.65},null]},{"c":[{"v":5039.379},null,null,{"v":32.373},null]},{"c":[{"v":5992.848},null,null,{"v":32.878},null]},{"c":[{"v":1032.885},null,null,null,{"v":31.116}]},{"c":[{"v":1987.043},null,null,null,{"v":33.865}]},{"c":[{"v":2995.272},null,null,null,{"v":34.595}]},{"c":[{"v":4009.312},null,null,null,{"v":35.375}]},{"c":[{"v":5005.691},null,null,null,{"v":35.993}]},{"c":[{"v":5990.219},null,null,null,{"v":36.386}]},{"c":[{"v":1015.088},{"v":30.699},null,null,null]},{"c":[{"v":2002.261},{"v":34.787},null,null,null]},{"c":[{"v":2994.869},{"v":35.526},null,null,null]},{"c":[{"v":3989.763},{"v":36.135},null,null,null]},{"c":[{"v":4986.867},{"v":36.595},null,null,null]},{"c":[{"v":5979.608},{"v":36.9},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}',]
+snrs[3] = ['{"rows":[{"c":[{"v":1000.295},null,{"v":38.081},null,null]},{"c":[{"v":2026.918},null,{"v":41.732},null,null]},{"c":[{"v":3044.092},null,{"v":43.686},null,null]},{"c":[{"v":4040.78},null,{"v":45.07},null,null]},{"c":[{"v":5066.685},null,{"v":46.164},null,null]},{"c":[{"v":6046.157},null,{"v":47.001},null,null]},{"c":[{"v":1012.805},null,null,{"v":38.966},null]},{"c":[{"v":2009.085},null,null,{"v":42.59},null]},{"c":[{"v":3039.447},null,null,{"v":44.509},null]},{"c":[{"v":4029.663},null,null,{"v":45.801},null]},{"c":[{"v":5049.642},null,null,{"v":46.875},null]},{"c":[{"v":6065.847},null,null,{"v":47.728},null]},{"c":[{"v":1013.382},null,null,null,{"v":39.788}]},{"c":[{"v":2020.602},null,null,null,{"v":43.629}]},{"c":[{"v":3029.122},null,null,null,{"v":45.568}]},{"c":[{"v":4011.015},null,null,null,{"v":46.872}]},{"c":[{"v":5020.662},null,null,null,{"v":47.916}]},{"c":[{"v":6027.633},null,null,null,{"v":48.701}]},{"c":[{"v":1009.752},{"v":40.183},null,null,null]},{"c":[{"v":2004.795},{"v":44.126},null,null,null]},{"c":[{"v":3018.59},{"v":46.129},null,null,null]},{"c":[{"v":4003.247},{"v":47.408},null,null,null]},{"c":[{"v":5033.577},{"v":48.508},null,null,null]},{"c":[{"v":6023.93},{"v":49.352},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1085.014},null,{"v":31.611},null,null]},{"c":[{"v":2018.61},null,{"v":34.009},null,null]},{"c":[{"v":3024.714},null,{"v":36.237},null,null]},{"c":[{"v":4028.454},null,{"v":37.596},null,null]},{"c":[{"v":5053.778},null,{"v":38.577},null,null]},{"c":[{"v":6046.827},null,{"v":39.363},null,null]},{"c":[{"v":1070.864},null,null,{"v":32.003},null]},{"c":[{"v":2011.309},null,null,{"v":34.364},null]},{"c":[{"v":3030.466},null,null,{"v":36.545},null]},{"c":[{"v":4029.843},null,null,{"v":37.844},null]},{"c":[{"v":5040.13},null,null,{"v":38.773},null]},{"c":[{"v":6050.021},null,null,{"v":39.536},null]},{"c":[{"v":1085.821},null,null,null,{"v":32.005}]},{"c":[{"v":2025.413},null,null,null,{"v":34.489}]},{"c":[{"v":3020.923},null,null,null,{"v":36.739}]},{"c":[{"v":4033.966},null,null,null,{"v":38.082}]},{"c":[{"v":5042.509},null,null,null,{"v":39.014}]},{"c":[{"v":6036.622},null,null,null,{"v":39.781}]},{"c":[{"v":1092.909},{"v":32.387},null,null,null]},{"c":[{"v":2018.438},{"v":34.771},null,null,null]},{"c":[{"v":3021.581},{"v":36.993},null,null,null]},{"c":[{"v":4033.731},{"v":38.288},null,null,null]},{"c":[{"v":5039.71},{"v":39.182},null,null,null]},{"c":[{"v":6049.85},{"v":39.946},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1143.621},null,{"v":28.961},null,null]},{"c":[{"v":2001.264},null,{"v":30.067},null,null]},{"c":[{"v":3007.213},null,{"v":30.677},null,null]},{"c":[{"v":4015.376},null,{"v":31.351},null,null]},{"c":[{"v":5010.517},null,{"v":32.052},null,null]},{"c":[{"v":6050.053},null,{"v":32.589},null,null]},{"c":[{"v":1157.4},null,null,{"v":29.234},null]},{"c":[{"v":1992.832},null,null,{"v":30.482},null]},{"c":[{"v":2998.157},null,null,{"v":31.135},null]},{"c":[{"v":4032.717},null,null,{"v":31.841},null]},{"c":[{"v":5039.379},null,null,{"v":32.548},null]},{"c":[{"v":5992.848},null,null,{"v":33.046},null]},{"c":[{"v":1032.885},null,null,null,{"v":31.418}]},{"c":[{"v":1987.043},null,null,null,{"v":34.028}]},{"c":[{"v":2995.272},null,null,null,{"v":34.808}]},{"c":[{"v":4009.312},null,null,null,{"v":35.552}]},{"c":[{"v":5005.691},null,null,null,{"v":36.132}]},{"c":[{"v":5990.219},null,null,null,{"v":36.51}]},{"c":[{"v":1015.088},{"v":30.945},null,null,null]},{"c":[{"v":2002.261},{"v":34.89},null,null,null]},{"c":[{"v":2994.869},{"v":35.651},null,null,null]},{"c":[{"v":3989.763},{"v":36.252},null,null,null]},{"c":[{"v":4986.867},{"v":36.704},null,null,null]},{"c":[{"v":5979.608},{"v":37.0},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}',]
+snrs[4] = ['{"rows":[{"c":[{"v":1000.295},null,{"v":37.147},null,null]},{"c":[{"v":2026.918},null,{"v":40.956},null,null]},{"c":[{"v":3044.092},null,{"v":43.025},null,null]},{"c":[{"v":4040.78},null,{"v":44.455},null,null]},{"c":[{"v":5066.685},null,{"v":45.62},null,null]},{"c":[{"v":6046.157},null,{"v":46.426},null,null]},{"c":[{"v":1012.805},null,null,{"v":38.131},null]},{"c":[{"v":2009.085},null,null,{"v":42.117},null]},{"c":[{"v":3039.447},null,null,{"v":44.134},null]},{"c":[{"v":4029.663},null,null,{"v":45.497},null]},{"c":[{"v":5049.642},null,null,{"v":46.568},null]},{"c":[{"v":6065.847},null,null,{"v":47.45},null]},{"c":[{"v":1013.382},null,null,null,{"v":38.895}]},{"c":[{"v":2020.602},null,null,null,{"v":43.168}]},{"c":[{"v":3029.122},null,null,null,{"v":45.206}]},{"c":[{"v":4011.015},null,null,null,{"v":46.606}]},{"c":[{"v":5020.662},null,null,null,{"v":47.681}]},{"c":[{"v":6027.633},null,null,null,{"v":48.415}]},{"c":[{"v":1009.752},{"v":39.409},null,null,null]},{"c":[{"v":2004.795},{"v":43.646},null,null,null]},{"c":[{"v":3018.59},{"v":45.778},null,null,null]},{"c":[{"v":4003.247},{"v":47.095},null,null,null]},{"c":[{"v":5033.577},{"v":48.229},null,null,null]},{"c":[{"v":6023.93},{"v":49.071},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1085.014},null,{"v":31.363},null,null]},{"c":[{"v":2018.61},null,{"v":33.525},null,null]},{"c":[{"v":3024.714},null,{"v":35.985},null,null]},{"c":[{"v":4028.454},null,{"v":37.437},null,null]},{"c":[{"v":5053.778},null,{"v":38.433},null,null]},{"c":[{"v":6046.827},null,{"v":39.237},null,null]},{"c":[{"v":1070.864},null,null,{"v":31.736},null]},{"c":[{"v":2011.309},null,null,{"v":33.872},null]},{"c":[{"v":3030.466},null,null,{"v":36.294},null]},{"c":[{"v":4029.843},null,null,{"v":37.688},null]},{"c":[{"v":5040.13},null,null,{"v":38.637},null]},{"c":[{"v":6050.021},null,null,{"v":39.412},null]},{"c":[{"v":1085.821},null,null,null,{"v":31.737}]},{"c":[{"v":2025.413},null,null,null,{"v":33.944}]},{"c":[{"v":3020.923},null,null,null,{"v":36.506}]},{"c":[{"v":4033.966},null,null,null,{"v":37.931}]},{"c":[{"v":5042.509},null,null,null,{"v":38.886}]},{"c":[{"v":6036.622},null,null,null,{"v":39.666}]},{"c":[{"v":1092.909},{"v":32.121},null,null,null]},{"c":[{"v":2018.438},{"v":34.261},null,null,null]},{"c":[{"v":3021.581},{"v":36.77},null,null,null]},{"c":[{"v":4033.731},{"v":38.138},null,null,null]},{"c":[{"v":5039.71},{"v":39.054},null,null,null]},{"c":[{"v":6049.85},{"v":39.83},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1143.621},null,{"v":28.799},null,null]},{"c":[{"v":2001.264},null,{"v":29.872},null,null]},{"c":[{"v":3007.213},null,{"v":30.425},null,null]},{"c":[{"v":4015.376},null,{"v":31.113},null,null]},{"c":[{"v":5010.517},null,{"v":31.843},null,null]},{"c":[{"v":6050.053},null,{"v":32.383},null,null]},{"c":[{"v":1157.4},null,null,{"v":29.084},null]},{"c":[{"v":1992.832},null,null,{"v":30.299},null]},{"c":[{"v":2998.157},null,null,{"v":30.897},null]},{"c":[{"v":4032.717},null,null,{"v":31.605},null]},{"c":[{"v":5039.379},null,null,{"v":32.331},null]},{"c":[{"v":5992.848},null,null,{"v":32.842},null]},{"c":[{"v":1032.885},null,null,null,{"v":31.109}]},{"c":[{"v":1987.043},null,null,null,{"v":33.859}]},{"c":[{"v":2995.272},null,null,null,{"v":34.591}]},{"c":[{"v":4009.312},null,null,null,{"v":35.372}]},{"c":[{"v":5005.691},null,null,null,{"v":35.988}]},{"c":[{"v":5990.219},null,null,null,{"v":36.379}]},{"c":[{"v":1015.088},{"v":30.694},null,null,null]},{"c":[{"v":2002.261},{"v":34.779},null,null,null]},{"c":[{"v":2994.869},{"v":35.522},null,null,null]},{"c":[{"v":3989.763},{"v":36.131},null,null,null]},{"c":[{"v":4986.867},{"v":36.589},null,null,null]},{"c":[{"v":5979.608},{"v":36.892},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}',]
+snrs[5] = ['{"rows":[{"c":[{"v":1000.295},null,{"v":66.511},null,null]},{"c":[{"v":2026.918},null,{"v":79.386},null,null]},{"c":[{"v":3044.092},null,{"v":84.881},null,null]},{"c":[{"v":4040.78},null,{"v":88.159},null,null]},{"c":[{"v":5066.685},null,{"v":90.329},null,null]},{"c":[{"v":6046.157},null,{"v":91.65},null,null]},{"c":[{"v":1012.805},null,null,{"v":71.712},null]},{"c":[{"v":2009.085},null,null,{"v":83.31},null]},{"c":[{"v":3039.447},null,null,{"v":87.726},null]},{"c":[{"v":4029.663},null,null,{"v":90.19},null]},{"c":[{"v":5049.642},null,null,{"v":91.848},null]},{"c":[{"v":6065.847},null,null,{"v":92.926},null]},{"c":[{"v":1013.382},null,null,null,{"v":72.982}]},{"c":[{"v":2020.602},null,null,null,{"v":84.931}]},{"c":[{"v":3029.122},null,null,null,{"v":89.2}]},{"c":[{"v":4011.015},null,null,null,{"v":91.432}]},{"c":[{"v":5020.662},null,null,null,{"v":92.848}]},{"c":[{"v":6027.633},null,null,null,{"v":93.747}]},{"c":[{"v":1009.752},{"v":73.642},null,null,null]},{"c":[{"v":2004.795},{"v":86.005},null,null,null]},{"c":[{"v":3018.59},{"v":90.095},null,null,null]},{"c":[{"v":4003.247},{"v":92.092},null,null,null]},{"c":[{"v":5033.577},{"v":93.45},null,null,null]},{"c":[{"v":6023.93},{"v":94.338},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1085.014},null,{"v":30.73},null,null]},{"c":[{"v":2018.61},null,{"v":43.161},null,null]},{"c":[{"v":3024.714},null,{"v":55.887},null,null]},{"c":[{"v":4028.454},null,{"v":63.093},null,null]},{"c":[{"v":5053.778},null,{"v":67.825},null,null]},{"c":[{"v":6046.827},null,{"v":71.457},null,null]},{"c":[{"v":1070.864},null,null,{"v":32.98},null]},{"c":[{"v":2011.309},null,null,{"v":45.148},null]},{"c":[{"v":3030.466},null,null,{"v":57.531},null]},{"c":[{"v":4029.843},null,null,{"v":64.32},null]},{"c":[{"v":5040.13},null,null,{"v":68.757},null]},{"c":[{"v":6050.021},null,null,{"v":72.207},null]},{"c":[{"v":1085.821},null,null,null,{"v":32.357}]},{"c":[{"v":2025.413},null,null,null,{"v":45.234}]},{"c":[{"v":3020.923},null,null,null,{"v":58.17}]},{"c":[{"v":4033.966},null,null,null,{"v":65.083}]},{"c":[{"v":5042.509},null,null,null,{"v":69.512}]},{"c":[{"v":6036.622},null,null,null,{"v":72.955}]},{"c":[{"v":1092.909},{"v":34.27},null,null,null]},{"c":[{"v":2018.438},{"v":46.828},null,null,null]},{"c":[{"v":3021.581},{"v":59.429},null,null,null]},{"c":[{"v":4033.731},{"v":66.02},null,null,null]},{"c":[{"v":5039.71},{"v":70.196},null,null,null]},{"c":[{"v":6049.85},{"v":73.557},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1143.621},null,{"v":21.697},null,null]},{"c":[{"v":2001.264},null,{"v":29.743},null,null]},{"c":[{"v":3007.213},null,{"v":33.43},null,null]},{"c":[{"v":4015.376},null,{"v":37.13},null,null]},{"c":[{"v":5010.517},null,{"v":40.782},null,null]},{"c":[{"v":6050.053},null,{"v":43.632},null,null]},{"c":[{"v":1157.4},null,null,{"v":23.561},null]},{"c":[{"v":1992.832},null,null,{"v":33.837},null]},{"c":[{"v":2998.157},null,null,{"v":37.771},null]},{"c":[{"v":4032.717},null,null,{"v":41.347},null]},{"c":[{"v":5039.379},null,null,{"v":44.778},null]},{"c":[{"v":5992.848},null,null,{"v":47.273},null]},{"c":[{"v":1032.885},null,null,null,{"v":34.063}]},{"c":[{"v":1987.043},null,null,null,{"v":51.374}]},{"c":[{"v":2995.272},null,null,null,{"v":55.126}]},{"c":[{"v":4009.312},null,null,null,{"v":58.468}]},{"c":[{"v":5005.691},null,null,null,{"v":60.862}]},{"c":[{"v":5990.219},null,null,null,{"v":62.295}]},{"c":[{"v":1015.088},{"v":29.307},null,null,null]},{"c":[{"v":2002.261},{"v":56.19},null,null,null]},{"c":[{"v":2994.869},{"v":59.706},null,null,null]},{"c":[{"v":3989.763},{"v":62.027},null,null,null]},{"c":[{"v":4986.867},{"v":63.612},null,null,null]},{"c":[{"v":5979.608},{"v":64.626},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}',]
+snrs[6] = ['{"rows":[{"c":[{"v":1000.295},null,{"v":9504.0},null,null]},{"c":[{"v":2026.918},null,{"v":12041.0},null,null]},{"c":[{"v":3044.092},null,{"v":12522.0},null,null]},{"c":[{"v":4040.78},null,{"v":14413.0},null,null]},{"c":[{"v":5066.685},null,{"v":14415.0},null,null]},{"c":[{"v":6046.157},null,{"v":15269.0},null,null]},{"c":[{"v":1012.805},null,null,{"v":13338.0},null]},{"c":[{"v":2009.085},null,null,{"v":18884.0},null]},{"c":[{"v":3039.447},null,null,{"v":21166.0},null]},{"c":[{"v":4029.663},null,null,{"v":23254.0},null]},{"c":[{"v":5049.642},null,null,{"v":25685.0},null]},{"c":[{"v":6065.847},null,null,{"v":27237.0},null]},{"c":[{"v":1013.382},null,null,null,{"v":16001.0}]},{"c":[{"v":2020.602},null,null,null,{"v":20560.0}]},{"c":[{"v":3029.122},null,null,null,{"v":24614.0}]},{"c":[{"v":4011.015},null,null,null,{"v":26422.0}]},{"c":[{"v":5020.662},null,null,null,{"v":29249.0}]},{"c":[{"v":6027.633},null,null,null,{"v":29910.0}]},{"c":[{"v":1009.752},{"v":24499.0},null,null,null]},{"c":[{"v":2004.795},{"v":30425.0},null,null,null]},{"c":[{"v":3018.59},{"v":37740.0},null,null,null]},{"c":[{"v":4003.247},{"v":40049.0},null,null,null]},{"c":[{"v":5033.577},{"v":44339.0},null,null,null]},{"c":[{"v":6023.93},{"v":42479.0},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1085.014},null,{"v":10644.0},null,null]},{"c":[{"v":2018.61},null,{"v":13014.0},null,null]},{"c":[{"v":3024.714},null,{"v":13767.0},null,null]},{"c":[{"v":4028.454},null,{"v":14681.0},null,null]},{"c":[{"v":5053.778},null,{"v":15563.0},null,null]},{"c":[{"v":6046.827},null,{"v":14251.0},null,null]},{"c":[{"v":1070.864},null,null,{"v":15905.0},null]},{"c":[{"v":2011.309},null,null,{"v":21082.0},null]},{"c":[{"v":3030.466},null,null,{"v":24770.0},null]},{"c":[{"v":4029.843},null,null,{"v":27358.0},null]},{"c":[{"v":5040.13},null,null,{"v":31585.0},null]},{"c":[{"v":6050.021},null,null,{"v":32259.0},null]},{"c":[{"v":1085.821},null,null,null,{"v":16279.0}]},{"c":[{"v":2025.413},null,null,null,{"v":21146.0}]},{"c":[{"v":3020.923},null,null,null,{"v":25579.0}]},{"c":[{"v":4033.966},null,null,null,{"v":29170.0}]},{"c":[{"v":5042.509},null,null,null,{"v":30666.0}]},{"c":[{"v":6036.622},null,null,null,{"v":33903.0}]},{"c":[{"v":1092.909},{"v":37890.0},null,null,null]},{"c":[{"v":2018.438},{"v":40637.0},null,null,null]},{"c":[{"v":3021.581},{"v":45808.0},null,null,null]},{"c":[{"v":4033.731},{"v":51017.0},null,null,null]},{"c":[{"v":5039.71},{"v":53709.0},null,null,null]},{"c":[{"v":6049.85},{"v":57012.0},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1143.621},null,{"v":13243.0},null,null]},{"c":[{"v":2001.264},null,{"v":16361.0},null,null]},{"c":[{"v":3007.213},null,{"v":19623.0},null,null]},{"c":[{"v":4015.376},null,{"v":19909.0},null,null]},{"c":[{"v":5010.517},null,{"v":20565.0},null,null]},{"c":[{"v":6050.053},null,{"v":21414.0},null,null]},{"c":[{"v":1157.4},null,null,{"v":21247.0},null]},{"c":[{"v":1992.832},null,null,{"v":27520.0},null]},{"c":[{"v":2998.157},null,null,{"v":31100.0},null]},{"c":[{"v":4032.717},null,null,{"v":41861.0},null]},{"c":[{"v":5039.379},null,null,{"v":43648.0},null]},{"c":[{"v":5992.848},null,null,{"v":48310.0},null]},{"c":[{"v":1032.885},null,null,null,{"v":22807.0}]},{"c":[{"v":1987.043},null,null,null,{"v":30602.0}]},{"c":[{"v":2995.272},null,null,null,{"v":41639.0}]},{"c":[{"v":4009.312},null,null,null,{"v":49120.0}]},{"c":[{"v":5005.691},null,null,null,{"v":56551.0}]},{"c":[{"v":5990.219},null,null,null,{"v":60623.0}]},{"c":[{"v":1015.088},{"v":39310.0},null,null,null]},{"c":[{"v":2002.261},{"v":59959.0},null,null,null]},{"c":[{"v":2994.869},{"v":69431.0},null,null,null]},{"c":[{"v":3989.763},{"v":96295.0},null,null,null]},{"c":[{"v":4986.867},{"v":118130.0},null,null,null]},{"c":[{"v":5979.608},{"v":129329.0},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}',]
+snrs[7] = ['{"rows":[{"c":[{"v":1000.295},null,{"v":0},null,null]},{"c":[{"v":2026.918},null,{"v":0},null,null]},{"c":[{"v":3044.092},null,{"v":0},null,null]},{"c":[{"v":4040.78},null,{"v":0},null,null]},{"c":[{"v":5066.685},null,{"v":0},null,null]},{"c":[{"v":6046.157},null,{"v":0},null,null]},{"c":[{"v":1012.805},null,null,{"v":0},null]},{"c":[{"v":2009.085},null,null,{"v":0},null]},{"c":[{"v":3039.447},null,null,{"v":0},null]},{"c":[{"v":4029.663},null,null,{"v":0},null]},{"c":[{"v":5049.642},null,null,{"v":0},null]},{"c":[{"v":6065.847},null,null,{"v":0},null]},{"c":[{"v":1013.382},null,null,null,{"v":1.34}]},{"c":[{"v":2020.602},null,null,null,{"v":1.03}]},{"c":[{"v":3029.122},null,null,null,{"v":0.97}]},{"c":[{"v":4011.015},null,null,null,{"v":0.28}]},{"c":[{"v":5020.662},null,null,null,{"v":0.41}]},{"c":[{"v":6027.633},null,null,null,{"v":0.46}]},{"c":[{"v":1009.752},{"v":0.98},null,null,null]},{"c":[{"v":2004.795},{"v":0.24},null,null,null]},{"c":[{"v":3018.59},{"v":0.62},null,null,null]},{"c":[{"v":4003.247},{"v":0.08},null,null,null]},{"c":[{"v":5033.577},{"v":0.67},null,null,null]},{"c":[{"v":6023.93},{"v":0.4},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1085.014},null,{"v":0},null,null]},{"c":[{"v":2018.61},null,{"v":0},null,null]},{"c":[{"v":3024.714},null,{"v":0},null,null]},{"c":[{"v":4028.454},null,{"v":0},null,null]},{"c":[{"v":5053.778},null,{"v":0},null,null]},{"c":[{"v":6046.827},null,{"v":0},null,null]},{"c":[{"v":1070.864},null,null,{"v":0},null]},{"c":[{"v":2011.309},null,null,{"v":0},null]},{"c":[{"v":3030.466},null,null,{"v":0},null]},{"c":[{"v":4029.843},null,null,{"v":0},null]},{"c":[{"v":5040.13},null,null,{"v":0},null]},{"c":[{"v":6050.021},null,null,{"v":0},null]},{"c":[{"v":1085.821},null,null,null,{"v":8.58}]},{"c":[{"v":2025.413},null,null,null,{"v":1.27}]},{"c":[{"v":3020.923},null,null,null,{"v":0.7}]},{"c":[{"v":4033.966},null,null,null,{"v":0.85}]},{"c":[{"v":5042.509},null,null,null,{"v":0.85}]},{"c":[{"v":6036.622},null,null,null,{"v":0.61}]},{"c":[{"v":1092.909},{"v":9.29},null,null,null]},{"c":[{"v":2018.438},{"v":0.92},null,null,null]},{"c":[{"v":3021.581},{"v":0.72},null,null,null]},{"c":[{"v":4033.731},{"v":0.84},null,null,null]},{"c":[{"v":5039.71},{"v":0.79},null,null,null]},{"c":[{"v":6049.85},{"v":0.83},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1143.621},null,{"v":0},null,null]},{"c":[{"v":2001.264},null,{"v":0},null,null]},{"c":[{"v":3007.213},null,{"v":0},null,null]},{"c":[{"v":4015.376},null,{"v":0},null,null]},{"c":[{"v":5010.517},null,{"v":0},null,null]},{"c":[{"v":6050.053},null,{"v":0},null,null]},{"c":[{"v":1157.4},null,null,{"v":0},null]},{"c":[{"v":1992.832},null,null,{"v":0},null]},{"c":[{"v":2998.157},null,null,{"v":0},null]},{"c":[{"v":4032.717},null,null,{"v":0},null]},{"c":[{"v":5039.379},null,null,{"v":0},null]},{"c":[{"v":5992.848},null,null,{"v":0},null]},{"c":[{"v":1032.885},null,null,null,{"v":3.29}]},{"c":[{"v":1987.043},null,null,null,{"v":-0.65}]},{"c":[{"v":2995.272},null,null,null,{"v":-0.16}]},{"c":[{"v":4009.312},null,null,null,{"v":0.23}]},{"c":[{"v":5005.691},null,null,null,{"v":0.11}]},{"c":[{"v":5990.219},null,null,null,{"v":-0.16}]},{"c":[{"v":1015.088},{"v":1.51},null,null,null]},{"c":[{"v":2002.261},{"v":0.11},null,null,null]},{"c":[{"v":2994.869},{"v":-0.17},null,null,null]},{"c":[{"v":3989.763},{"v":-0.26},null,null,null]},{"c":[{"v":4986.867},{"v":-0.26},null,null,null]},{"c":[{"v":5979.608},{"v":-0.34},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}',]
+snrs[8] = ['{"rows":[{"c":[{"v":1000.295},null,{"v":0},null,null]},{"c":[{"v":2026.918},null,{"v":0},null,null]},{"c":[{"v":3044.092},null,{"v":0},null,null]},{"c":[{"v":4040.78},null,{"v":0},null,null]},{"c":[{"v":5066.685},null,{"v":0},null,null]},{"c":[{"v":6046.157},null,{"v":0},null,null]},{"c":[{"v":1012.805},null,null,{"v":0},null]},{"c":[{"v":2009.085},null,null,{"v":0},null]},{"c":[{"v":3039.447},null,null,{"v":0},null]},{"c":[{"v":4029.663},null,null,{"v":0},null]},{"c":[{"v":5049.642},null,null,{"v":0},null]},{"c":[{"v":6065.847},null,null,{"v":0},null]},{"c":[{"v":1013.382},null,null,null,{"v":1.34}]},{"c":[{"v":2020.602},null,null,null,{"v":1.03}]},{"c":[{"v":3029.122},null,null,null,{"v":0.97}]},{"c":[{"v":4011.015},null,null,null,{"v":0.28}]},{"c":[{"v":5020.662},null,null,null,{"v":0.41}]},{"c":[{"v":6027.633},null,null,null,{"v":0.46}]},{"c":[{"v":1009.752},{"v":0.98},null,null,null]},{"c":[{"v":2004.795},{"v":0.24},null,null,null]},{"c":[{"v":3018.59},{"v":0.62},null,null,null]},{"c":[{"v":4003.247},{"v":0.08},null,null,null]},{"c":[{"v":5033.577},{"v":0.67},null,null,null]},{"c":[{"v":6023.93},{"v":0.4},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1085.014},null,{"v":0},null,null]},{"c":[{"v":2018.61},null,{"v":0},null,null]},{"c":[{"v":3024.714},null,{"v":0},null,null]},{"c":[{"v":4028.454},null,{"v":0},null,null]},{"c":[{"v":5053.778},null,{"v":0},null,null]},{"c":[{"v":6046.827},null,{"v":0},null,null]},{"c":[{"v":1070.864},null,null,{"v":0},null]},{"c":[{"v":2011.309},null,null,{"v":0},null]},{"c":[{"v":3030.466},null,null,{"v":0},null]},{"c":[{"v":4029.843},null,null,{"v":0},null]},{"c":[{"v":5040.13},null,null,{"v":0},null]},{"c":[{"v":6050.021},null,null,{"v":0},null]},{"c":[{"v":1085.821},null,null,null,{"v":8.58}]},{"c":[{"v":2025.413},null,null,null,{"v":1.27}]},{"c":[{"v":3020.923},null,null,null,{"v":0.7}]},{"c":[{"v":4033.966},null,null,null,{"v":0.85}]},{"c":[{"v":5042.509},null,null,null,{"v":0.85}]},{"c":[{"v":6036.622},null,null,null,{"v":0.61}]},{"c":[{"v":1092.909},{"v":9.29},null,null,null]},{"c":[{"v":2018.438},{"v":0.92},null,null,null]},{"c":[{"v":3021.581},{"v":0.72},null,null,null]},{"c":[{"v":4033.731},{"v":0.84},null,null,null]},{"c":[{"v":5039.71},{"v":0.79},null,null,null]},{"c":[{"v":6049.85},{"v":0.83},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1143.621},null,{"v":0},null,null]},{"c":[{"v":2001.264},null,{"v":0},null,null]},{"c":[{"v":3007.213},null,{"v":0},null,null]},{"c":[{"v":4015.376},null,{"v":0},null,null]},{"c":[{"v":5010.517},null,{"v":0},null,null]},{"c":[{"v":6050.053},null,{"v":0},null,null]},{"c":[{"v":1157.4},null,null,{"v":0},null]},{"c":[{"v":1992.832},null,null,{"v":0},null]},{"c":[{"v":2998.157},null,null,{"v":0},null]},{"c":[{"v":4032.717},null,null,{"v":0},null]},{"c":[{"v":5039.379},null,null,{"v":0},null]},{"c":[{"v":5992.848},null,null,{"v":0},null]},{"c":[{"v":1032.885},null,null,null,{"v":3.29}]},{"c":[{"v":1987.043},null,null,null,{"v":0.65}]},{"c":[{"v":2995.272},null,null,null,{"v":0.16}]},{"c":[{"v":4009.312},null,null,null,{"v":0.23}]},{"c":[{"v":5005.691},null,null,null,{"v":0.11}]},{"c":[{"v":5990.219},null,null,null,{"v":0.16}]},{"c":[{"v":1015.088},{"v":1.51},null,null,null]},{"c":[{"v":2002.261},{"v":0.11},null,null,null]},{"c":[{"v":2994.869},{"v":0.17},null,null,null]},{"c":[{"v":3989.763},{"v":0.26},null,null,null]},{"c":[{"v":4986.867},{"v":0.26},null,null,null]},{"c":[{"v":5979.608},{"v":0.34},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}',]
+snrs[9] = ['{"rows":[{"c":[{"v":1000.295},null,{"v":0},null,null]},{"c":[{"v":2026.918},null,{"v":0},null,null]},{"c":[{"v":3044.092},null,{"v":0},null,null]},{"c":[{"v":4040.78},null,{"v":0},null,null]},{"c":[{"v":5066.685},null,{"v":0},null,null]},{"c":[{"v":6046.157},null,{"v":0},null,null]},{"c":[{"v":1012.805},null,null,{"v":0},null]},{"c":[{"v":2009.085},null,null,{"v":0},null]},{"c":[{"v":3039.447},null,null,{"v":0},null]},{"c":[{"v":4029.663},null,null,{"v":0},null]},{"c":[{"v":5049.642},null,null,{"v":0},null]},{"c":[{"v":6065.847},null,null,{"v":0},null]},{"c":[{"v":1013.382},null,null,null,{"v":0}]},{"c":[{"v":2020.602},null,null,null,{"v":0}]},{"c":[{"v":3029.122},null,null,null,{"v":0}]},{"c":[{"v":4011.015},null,null,null,{"v":0}]},{"c":[{"v":5020.662},null,null,null,{"v":0}]},{"c":[{"v":6027.633},null,null,null,{"v":0}]},{"c":[{"v":1009.752},{"v":0},null,null,null]},{"c":[{"v":2004.795},{"v":0},null,null,null]},{"c":[{"v":3018.59},{"v":0},null,null,null]},{"c":[{"v":4003.247},{"v":0},null,null,null]},{"c":[{"v":5033.577},{"v":0},null,null,null]},{"c":[{"v":6023.93},{"v":0},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1085.014},null,{"v":0},null,null]},{"c":[{"v":2018.61},null,{"v":0},null,null]},{"c":[{"v":3024.714},null,{"v":0},null,null]},{"c":[{"v":4028.454},null,{"v":0},null,null]},{"c":[{"v":5053.778},null,{"v":0},null,null]},{"c":[{"v":6046.827},null,{"v":0},null,null]},{"c":[{"v":1070.864},null,null,{"v":0},null]},{"c":[{"v":2011.309},null,null,{"v":0},null]},{"c":[{"v":3030.466},null,null,{"v":0},null]},{"c":[{"v":4029.843},null,null,{"v":0},null]},{"c":[{"v":5040.13},null,null,{"v":0},null]},{"c":[{"v":6050.021},null,null,{"v":0},null]},{"c":[{"v":1085.821},null,null,null,{"v":0}]},{"c":[{"v":2025.413},null,null,null,{"v":0}]},{"c":[{"v":3020.923},null,null,null,{"v":0}]},{"c":[{"v":4033.966},null,null,null,{"v":0}]},{"c":[{"v":5042.509},null,null,null,{"v":0}]},{"c":[{"v":6036.622},null,null,null,{"v":0}]},{"c":[{"v":1092.909},{"v":0},null,null,null]},{"c":[{"v":2018.438},{"v":0},null,null,null]},{"c":[{"v":3021.581},{"v":0},null,null,null]},{"c":[{"v":4033.731},{"v":0},null,null,null]},{"c":[{"v":5039.71},{"v":0},null,null,null]},{"c":[{"v":6049.85},{"v":0},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}','{"rows":[{"c":[{"v":1143.621},null,{"v":0},null,null]},{"c":[{"v":2001.264},null,{"v":0},null,null]},{"c":[{"v":3007.213},null,{"v":0},null,null]},{"c":[{"v":4015.376},null,{"v":0},null,null]},{"c":[{"v":5010.517},null,{"v":0},null,null]},{"c":[{"v":6050.053},null,{"v":0},null,null]},{"c":[{"v":1157.4},null,null,{"v":0},null]},{"c":[{"v":1992.832},null,null,{"v":0},null]},{"c":[{"v":2998.157},null,null,{"v":0},null]},{"c":[{"v":4032.717},null,null,{"v":0},null]},{"c":[{"v":5039.379},null,null,{"v":0},null]},{"c":[{"v":5992.848},null,null,{"v":0},null]},{"c":[{"v":1032.885},null,null,null,{"v":0}]},{"c":[{"v":1987.043},null,null,null,{"v":0}]},{"c":[{"v":2995.272},null,null,null,{"v":0}]},{"c":[{"v":4009.312},null,null,null,{"v":0}]},{"c":[{"v":5005.691},null,null,null,{"v":0}]},{"c":[{"v":5990.219},null,null,null,{"v":0}]},{"c":[{"v":1015.088},{"v":0},null,null,null]},{"c":[{"v":2002.261},{"v":0},null,null,null]},{"c":[{"v":2994.869},{"v":0},null,null,null]},{"c":[{"v":3989.763},{"v":0},null,null,null]},{"c":[{"v":4986.867},{"v":0},null,null,null]},{"c":[{"v":5979.608},{"v":0},null,null,null]}],"cols":[{"type":"number","id":"datarate","label":"Datarate"},{"type":"number","id":"cpu","label":"cpu"},{"type":"number","id":"cuda-fast","label":"cuda-fast"},{"type":"number","id":"cuda-splt","label":"cuda-splt"},{"type":"number","id":"cuda-tex","label":"cuda-tex"}]}',]
+
+
+var selected = 0
+var imagestr = '';
+var bettertable=0;
+var chart=0;
+var better=0;
+var metricdata=0;
+var metricView=0;
+var column=1;
+var formatter=0;
+
+function changeColumn(col) {
+  column = col;
+  console.log(col)
+  draw_files();
+}
+
+function changeMetric(m) {
+  ftable=m
+  draw_files()
+}
+
+function setup_vis() {
+  chart = new google.visualization.ScatterChart(
+      document.getElementById("metricgraph"));
+
+  bettertable = new google.visualization.Table(
+      document.getElementById("bettertable"));
+
+  draw_files();
+  build_metrics_radio();
+}
+
+function build_metrics_radio() {
+  for (metric=1; metric < metrics.length; metric++) {
+    var rb = document.createElement('input');
+    var l = document.createElement('label');
+    rb.setAttribute('type','radio');
+    rb.setAttribute('name','metric');
+    rb.setAttribute('onClick', "changeColumn('"+metric.toString()+"')");
+    l.innerHTML = metrics[metric];
+    document.getElementById('metrics').appendChild(rb);
+    document.getElementById('metrics').appendChild(l);
+  }
+}
+
+function draw_files() {
+  var options = {'allowHtml': true, 'width': "100%", 'height': "50%"};
+  if (better != 0) delete better;
+
+  col=eval(ftable+'[column]')
+  better = new google.visualization.DataTable(col)
+
+  // Python Template code replaces the following line with a list of
+  // formatters.
+  if (ftable == 'filestable_dsnr')
+    formatter = new google.visualization.NumberFormat(
+      {fractionDigits: 4, suffix:" db"});
+  else
+    formatter = new google.visualization.NumberFormat(
+       {fractionDigits: 4, suffix:"%"});
+
+     formatter.format(better, 1);   formatter.format(better, 2);   formatter.format(better, 3);
+
+  bettertable.draw(better,options);
+  google.visualization.events.addListener(bettertable, 'select',
+                                          selectBetterHandler);
+  query_file()
+}
+
+function query_file() {
+  imagestr = better.getFormattedValue(selected, 0)
+  var metricjson = eval('(' + snrs[column][selected] + ')');
+  metricdata = new google.visualization.DataTable(metricjson, 0.6);
+  if( metricView != 0 ) delete metricView;
+  metricView = new google.visualization.DataView(metricdata);
+
+  chart.draw(metricView, {curveType:'function',
+      explorer: {},
+      chartArea:{left:chart_left, top:chart_top, width:chart_width,
+      height:chart_height-90},
+      hAxis:{title:"Datarate in kbps"},
+      vAxis:{title:"Quality in decibels", format: '##.0', textPosition: 'in'},
+      legend:{position:"in"}, title:imagestr, pointSize:2, lineWidth:1,
+      width:chart_width, height:chart_height-50 });
+
+  google.visualization.events.addListener(chart, 'select', chartSelect);
+  google.visualization.events.addListener(chart, 'onmouseover', chartMouseOver);
+  google.visualization.events.addListener(chart, 'onmouseout', chartMouseOut);
+}
+
+function chartMouseOut(e) {
+  statusbar = document.getElementById('status');
+  statusbar.style.display = 'none';
+}
+
+function chartMouseOver(e) {
+  pointDifference(e.row, e.column)
+}
+
+function pointDifference(row, col) {
+  if(!row || !col)
+    return;
+
+  var cols = metricdata.getNumberOfColumns();
+  var rows = metricdata.getNumberOfRows();
+
+  var sel_bitrate = metricView.getValue(row, 0 );
+  var sel_metric = metricView.getValue(row, col);
+
+  var message = '<ul>' + metricView.getColumnLabel(col) +
+     ' (' + sel_bitrate.toFixed(0) + ' kbps, ' + sel_metric.toFixed(2) + ')' + ' is ';
+
+
+  // col 0 is datarate
+  for( var i=1;i<cols;++i) {
+
+    var metric_greatest_thats_less = 0;
+    var rate_greatest_thats_less = 0;
+    var metric_smallest_thats_greater = 999;
+    var rate_smallest_thats_greater = 0;
+
+    if(i==col)
+      continue;
+
+    // Find the lowest metric for the column that's greater than sel_metric and
+    // the highest metric for this column that's less than the metric.
+    for(var line_count = 0; line_count < rows; ++line_count) {
+      this_metric = metricdata.getValue(line_count, i)
+      this_rate = metricdata.getValue(line_count, 0)
+      if(!this_metric)
+        continue;
+
+      if(this_metric > metric_greatest_thats_less &&
+         this_metric <= sel_metric) {
+        metric_greatest_thats_less = this_metric;
+        rate_greatest_thats_less = this_rate;
+      }
+      if(this_metric < metric_smallest_thats_greater &&
+        this_metric > sel_metric) {
+        metric_smallest_thats_greater = this_metric;
+        rate_smallest_thats_greater = this_rate;
+      }
+    }
+
+    if(rate_smallest_thats_greater == 0 || rate_greatest_thats_less == 0) {
+      message = message + " <li> Couldn't find a point on both sides.</li>"
+    } else {
+      metric_slope = ( rate_smallest_thats_greater - rate_greatest_thats_less) /
+          ( metric_smallest_thats_greater - metric_greatest_thats_less);
+
+      projected_rate = ( sel_metric - metric_greatest_thats_less) *
+          metric_slope + rate_greatest_thats_less;
+
+      difference = 100 * (projected_rate / sel_bitrate - 1);
+
+
+      if (difference > 0)
+        message = message + "<li>  " + difference.toFixed(2) +
+                  "% smaller than <em>" +
+                  metricdata.getColumnLabel(i) + "</em></li> "
+      else
+        message = message + "<li>  " + -difference.toFixed(2) +
+                  "% bigger than <em>" +
+                  metricdata.getColumnLabel(i) + "</em></li> "
+    }
+
+  }
+  message = message + "</ul>"
+  statusbar = document.getElementById('status');
+  statusbar.innerHTML = "<p>" + message + "</p>";
+  statusbar.style.display = 'block';
+}
+
+function chartSelect() {
+  var selection = chart.getSelection();
+  var message = '';
+  var min = metricView.getFormattedValue(selection[0].row, 0);
+  var max = metricView.getFormattedValue(selection[selection.length-1].row, 0);
+  var val = metricView.getFormattedValue(selection[0].row,selection[0].column);
+
+  pointDifference(selection[0].row, selection[0].column)
+  min = min / 3
+  max = max * 3
+  metricView.setRows(metricdata.getFilteredRows(
+      [{column: 0,minValue: min, maxValue:max}]));
+
+  chart.draw(metricView, {curveType:'function',
+      chartArea:{left:40, top:10, width:chart_width, height:chart_height - 110},
+      hAxis:{title:"datarate in kbps"}, vAxis:{title:"quality in decibels"},
+      legend:{position:"in"}, title:imagestr, pointSize:2, lineWidth:1,
+      width:chart_width, height:chart_height - 50});
+}
+
+function selectBetterHandler() {
+  var selection = bettertable.getSelection();
+  for (var i = 0; i < selection.length; i++) {
+    item = selection[i];
+  }
+  selected = item.row
+  query_file()
+}
+
+
+google.load('visualization', '1', {'packages' : ['corechart','table']});
+google.setOnLoadCallback(setup_vis);
+</script>
+</head>
+
+<body>
+
+  <div class="container_12">
+
+    <div class="grid_12 header">
+      <h2>Codec Comparison Results</h2>
+    </div>
+
+    <div class="grid_12 radio">
+
+      <form name="myform">
+        Method For Combining Points
+        <input type="radio" checked name="column" value="1"
+          onClick="changeMetric('filestable_avg')" />Average of bitrates difference
+        <input type="radio" name="column" value="2"
+          onClick="changeMetric('filestable_dsnr')" />BDSNR
+        <input type="radio" name="column" value="3"
+          onClick="changeMetric('filestable_drate')" />BDRATE
+      </form>
+
+      <form id="metrics" name="myform">
+      </form>
+
+    </div>
+
+    <div class="grid_12 main">
+
+      <div class="grid_5 alpha cliplist">
+        <div id="bettertable"></div>
+      </div>
+
+      <div class="grid_5 chartarea">
+        <div id="metricgraph"></div>
+      </div>
+
+      <div class="grid_2 omega indicators">
+        <div class="content">
+          <h5>Indicators</h5>
+          <hr>
+          <div id="status"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
+
